@@ -47,7 +47,7 @@ hystrix:
 
 ly:
   jwt:
-    pubKeyPath: D:/heima/rsa/rsa.pub # 公钥地址
+    pubKeyPath: C:/heima/rsa/rsa.pub # 公钥地址
     cookieName: LY_TOKEN # cookie的名称
 
   filter:

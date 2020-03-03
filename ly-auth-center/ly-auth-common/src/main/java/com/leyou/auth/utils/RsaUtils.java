@@ -1,5 +1,7 @@
 package com.leyou.auth.utils;
 
+import javafx.scene.control.Separator;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -86,6 +88,14 @@ public class RsaUtils {
 
     private static void writeFile(String destPath, byte[] bytes) throws IOException {
         File dest = new File(destPath);
+
+        String fileDir  = destPath.substring(0,destPath.lastIndexOf("/"));
+        File filedir=new File(fileDir);
+
+        if (!filedir.exists()){
+            filedir.mkdir();
+        }
+
         if (!dest.exists()) {
             dest.createNewFile();
         }
